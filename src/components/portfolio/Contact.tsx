@@ -71,7 +71,7 @@ export function Contact() {
                       Location
                     </p>
                     <p className="mt-1 text-sm font-medium">
-                      Port Elizabeth (Gqeberha), South Africa
+                      Cape Town, South Africa
                     </p>
                   </div>
                 </div>

@@ -19,18 +19,20 @@ export const GITHUB_URL = "https://github.com/222750014";
 /** Structured facts the assistant is allowed to state. Nothing invented. */
 export const knowledgeBase = {
   identity:
-    "Sesona Panca is an ICT Applications Development graduate based in Port Elizabeth (Gqeberha), South Africa, born in June 2004. She builds practical skills in artificial intelligence, prompt engineering, conversational systems, Python and software development.",
+    "Sesona Panca is an ICT Applications Development graduate based in Cape Town, South Africa, born in June 2004. He builds practical skills in artificial intelligence, prompt engineering, conversational systems, Python and software development.",
   study:
-    "Sesona completed a Diploma in ICT Applications Development, which gave her a foundation in application development, programming, software engineering and problem solving.",
+    "Sesona completed a Diploma in ICT: Application Development at Cape Peninsula University of Technology. He also earned his National Senior Certificate at Cowan High School from 2017 to 2021.",
   bootcamp:
-    "She is completing a September 2026 Artificial Intelligence Bootcamp covering AI Foundations, Prompt Engineering, Applied AI Projects and Portfolio Development — across four weeks: AI foundations and chatbot development, content generation, sentiment analysis, and an end-to-end industry AI solution.",
+    "He is completing a September 2026 Artificial Intelligence Bootcamp covering AI Foundations, Prompt Engineering, Applied AI Projects and Portfolio Development — across four weeks: AI foundations and chatbot development, content generation, sentiment analysis, and an end-to-end industry AI solution.",
   skills:
-    "Her skills span AI & Machine Learning (Generative AI, LLMs, Conversational AI), Prompt Engineering (role/context/constraints/output design, few-shot prompting, optimisation and testing), Programming (Python, JavaScript, HTML, CSS), Data (analysis, Pandas, NumPy, visualisation) and Software Development.",
+    "His skills span AI & Machine Learning (Generative AI, LLMs, Conversational AI), Prompt Engineering (role/context/constraints/output design, few-shot prompting, optimisation and testing), Programming (Python, JavaScript, HTML, CSS), Data (analysis, Pandas, NumPy, visualisation) and Software Development.",
   projects:
-    "Her portfolio includes the AI Chatbot (Week 1, built), plus the AI Content Generator, Sentiment Analysis Tool and Industry AI Solution — those three are coming soon.",
-  github: `You can explore her code and learning journey on GitHub: ${GITHUB_URL}`,
-  location: "Sesona is based in Port Elizabeth (Gqeberha), South Africa.",
-  contact: `The best way to reach her work is through GitHub: ${GITHUB_URL}. No email or phone number is listed here.`,
+    "His portfolio includes the AI Chatbot (Week 1, built), plus the AI Content Generator, Sentiment Analysis Tool and Industry AI Solution — those three are coming soon.",
+  certificates:
+    "Sesona has verified Coursera credentials from Google, Google Cloud, IBM and DeepLearning.AI. They include the five-course Google AI Essentials Specialization, Introduction to AI, Maximize Productivity With AI Tools, Discover the Art of Prompting, Use AI Responsibly, Stay Ahead of the AI Curve, Introduction to Generative AI, AI For Everyone, and Generative AI: Prompt Engineering Basics.",
+  github: `You can explore his code and learning journey on GitHub: ${GITHUB_URL}`,
+  location: "Sesona is based in Cape Town, South Africa. He was born in Port Elizabeth (Gqeberha), but that is not his current location.",
+  contact: `The best way to reach his work is through GitHub: ${GITHUB_URL}. No email or phone number is listed here.`,
 } as const;
 
 type Rule = { keywords: string[]; answer: string };
@@ -39,6 +41,7 @@ const rules: Rule[] = [
   { keywords: ["who", "about", "yourself", "sesona is"], answer: knowledgeBase.identity },
   { keywords: ["study", "studied", "qualification", "diploma", "education", "degree"], answer: knowledgeBase.study },
   { keywords: ["bootcamp", "journey", "september", "course", "week"], answer: knowledgeBase.bootcamp },
+  { keywords: ["certificate", "certification", "coursera", "credential", "google", "ibm"], answer: knowledgeBase.certificates },
   { keywords: ["skill", "tech", "stack", "know", "python", "prompt"], answer: knowledgeBase.skills },
   { keywords: ["project", "portfolio", "built", "chatbot", "work"], answer: knowledgeBase.projects },
   { keywords: ["github", "code", "repo"], answer: knowledgeBase.github },
@@ -47,14 +50,14 @@ const rules: Rule[] = [
 ];
 
 const fallback =
-  "I can answer questions about Sesona's background, her ICT Applications Development diploma, her September 2026 AI Bootcamp, her skills, her projects and her GitHub. Try one of the quick questions below.";
+  "I can answer questions about Sesona's background, his ICT Application Development diploma, certificates, September 2026 AI Bootcamp, skills, projects and GitHub. Try one of the quick questions below.";
 
 export const quickQuestions = [
   "Who is Sesona?",
   "What did Sesona study?",
-  "What is her AI Bootcamp?",
-  "What are her skills?",
-  "What is her GitHub?",
+  "What certificates has he earned?",
+  "What are his skills?",
+  "What is his GitHub?",
 ];
 
 /**

@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep portfolio claims in the UI and assistant knowledge grounded in the supplied CV and certificates, so public facts remain verifiable.
