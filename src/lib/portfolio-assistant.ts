@@ -31,7 +31,7 @@ export const knowledgeBase = {
   certificates:
     "Sesona has verified Coursera credentials from Google, Google Cloud, IBM and DeepLearning.AI. They include the five-course Google AI Essentials Specialization, Introduction to AI, Maximize Productivity With AI Tools, Discover the Art of Prompting, Use AI Responsibly, Stay Ahead of the AI Curve, Introduction to Generative AI, AI For Everyone, and Generative AI: Prompt Engineering Basics.",
   github: `You can explore his code and learning journey on GitHub: ${GITHUB_URL}`,
-  location: "Sesona is based in Cape Town, South Africa. He was born in Port Elizabeth (Gqeberha), but that is not his current location.",
+  location: "Sesona is based in Cape Town, South Africa.",
   contact: `The best way to reach his work is through GitHub: ${GITHUB_URL}. No email or phone number is listed here.`,
 } as const;
 
