@@ -92,7 +92,6 @@ export function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             className="btn-ghost inline-flex size-10 items-center justify-center rounded-full lg:hidden"
           >
-            {open ? <Menu className="size-5" aria-hidden="true" style={{ display: "none" }} /> : null}
             {open ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
           </button>
         </div>
