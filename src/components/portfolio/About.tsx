@@ -2,8 +2,8 @@ import { Cpu, MapPin, GraduationCap, CalendarDays } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const facts = [
-  { icon: GraduationCap, label: "Qualification", value: "Diploma in ICT Applications Development" },
-  { icon: MapPin, label: "Location", value: "Port Elizabeth (Gqeberha), South Africa" },
+  { icon: GraduationCap, label: "Qualification", value: "Diploma in ICT: Application Development" },
+  { icon: MapPin, label: "Location", value: "Cape Town, South Africa" },
   { icon: CalendarDays, label: "Born", value: "June 2004" },
   { icon: Cpu, label: "Current focus", value: "AI, Generative AI & Machine Learning" },
 ];

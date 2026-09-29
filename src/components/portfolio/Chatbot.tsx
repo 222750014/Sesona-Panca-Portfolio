@@ -10,7 +10,7 @@ import { Reveal, SectionHeading } from "./Reveal";
 const greeting: AssistantMessage = {
   id: "greeting",
   role: "assistant",
-  text: "Hi! I'm Sesona's portfolio assistant. Ask me about her background, studies, AI Bootcamp, skills or GitHub.",
+  text: "Hi! I'm Sesona's portfolio assistant. Ask me about his background, studies, certificates, AI Bootcamp, skills or GitHub.",
 };
 
 export function Chatbot() {
