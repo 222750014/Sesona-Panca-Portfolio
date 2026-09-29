@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/portfolio/Nav";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Journey } from "@/components/portfolio/Journey";
+import { Skills } from "@/components/portfolio/Skills";
+import { Projects } from "@/components/portfolio/Projects";
+import { Chatbot } from "@/components/portfolio/Chatbot";
+import { CaseStudy } from "@/components/portfolio/CaseStudy";
+import { Experience } from "@/components/portfolio/Experience";
+import { Contact, Footer } from "@/components/portfolio/Contact";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Sesona Panca | AI & ICT Applications Developer";
+const description =
+  "Personal portfolio of Sesona Panca, an ICT Applications Development graduate developing skills in Artificial Intelligence, Generative AI, Prompt Engineering, Python and Software Development.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Nav />
+      <main id="main">
+        <Hero />
+        <About />
+        <Journey />
+        <Skills />
+        <Projects />
+        <Chatbot />
+        <CaseStudy />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
