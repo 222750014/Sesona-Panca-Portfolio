@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Github, Sparkles } from "lucide-react";
-import { GITHUB_URL } from "@/lib/portfolio-assistant";
+import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { CV_URL } from "@/lib/portfolio-assistant";
 import { Reveal } from "./Reveal";
 
 const codeLines = [
-  { text: "class AIDeveloper:", tone: "key" },
+  { text: "class Graduate:", tone: "key" },
   { text: "    name = \"Sesona Panca\"", tone: "str" },
-  { text: "    field = \"ICT Applications Development\"", tone: "str" },
-  { text: "    focus = [\"AI\", \"Prompt Engineering\", \"Python\"]", tone: "str" },
-  { text: "    def build(self, idea):", tone: "key" },
-  { text: "        return solve(idea, with_=self.focus)", tone: "plain" },
+  { text: "    diploma = \"ICT: Application Development\"", tone: "str" },
+  { text: "    focus = [\"Data Analytics\", \"Prompt Engineering\"]", tone: "str" },
+  { text: "    def solve(self, problem):", tone: "key" },
+  { text: "        return insights(problem, with_=self.focus)", tone: "plain" },
 ];
 
-const badges = ["Generative AI", "Prompt Engineering", "Python", "Conversational AI", "Machine Learning"];
+const badges = ["Data Analytics", "SQL", "Python", "Prompt Engineering", "React"];
 
 export function Hero() {
   const [typed, setTyped] = useState(0);
@@ -46,42 +46,44 @@ export function Hero() {
       <div className="section-shell relative grid items-center gap-14 pb-20 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           <Reveal>
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.3em] text-cyan sm:text-xs">
-              AI • ICT Applications Development • Software
+            <p className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs text-muted-foreground">
+              <span className="pulse-dot size-2 rounded-full" style={{ background: "var(--cyan)" }} aria-hidden="true" />
+              Open to graduate opportunities and entry-level roles
             </p>
           </Reveal>
 
           <Reveal delay={80}>
             <h1 className="mt-6 text-4xl font-bold leading-[1.07] sm:text-5xl lg:text-6xl">
-              Building with <span className="text-gradient">Code, AI</span> &amp; Curiosity.
+              Hi, I&apos;m <span className="text-gradient">Sesona Panca.</span>
             </h1>
+            <p className="mt-4 font-mono text-xs uppercase tracking-[0.25em] text-cyan sm:text-sm">
+              Data Analytics | AI Prompt Engineering | ICT
+            </p>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              I&apos;m Sesona Panca, an ICT Applications Development graduate developing practical
-              skills in artificial intelligence, prompt engineering, conversational systems, Python
-              and software development.
+              I build technology-driven solutions, explore insights through data, and use
+              AI-assisted development to solve practical problems.
             </p>
           </Reveal>
 
           <Reveal delay={240}>
             <div className="mt-9 flex flex-wrap gap-3">
-              <a
-                href="#projects"
-                className="btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm"
-              >
-                Explore My Work
+              <a href="#contact" className="btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm">
+                Hire Me
                 <ArrowRight className="size-4" aria-hidden="true" />
               </a>
+              <a href="#projects" className="btn-ghost inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm">
+                View My Projects
+              </a>
               <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noreferrer noopener"
+                href={CV_URL}
+                download="Sesona_Panca_CV.pdf"
                 className="btn-ghost inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm"
               >
-                <Github className="size-4" aria-hidden="true" />
-                View GitHub
+                <Download className="size-4" aria-hidden="true" />
+                Download My CV
               </a>
             </div>
           </Reveal>

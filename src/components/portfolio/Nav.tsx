@@ -79,10 +79,12 @@ export function Nav() {
             target="_blank"
             rel="noreferrer noopener"
             aria-label="Sesona Panca on GitHub"
-            className="btn-ghost hidden items-center gap-2 rounded-full px-4 py-2 text-sm sm:inline-flex"
+            className="btn-ghost hidden size-10 items-center justify-center rounded-full sm:inline-flex"
           >
             <Github className="size-4" aria-hidden="true" />
-            GitHub
+          </a>
+          <a href="#contact" className="btn-glow inline-flex items-center rounded-full px-4 py-2 text-sm">
+            Hire Me
           </a>
           <button
             type="button"
