@@ -1,6 +1,7 @@
-import { Github, MapPin, ArrowUpRight } from "lucide-react";
-import { GITHUB_URL } from "@/lib/portfolio-assistant";
+import { Github, MapPin, ArrowUpRight, Mail, Phone } from "lucide-react";
+import { EMAIL, GITHUB_URL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/portfolio-assistant";
 import { Reveal, SectionHeading } from "./Reveal";
+import { ContactForm } from "./ContactForm";
 
 export function Contact() {
   return (
@@ -32,51 +33,43 @@ export function Contact() {
           </div>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
-          <SectionHeading
-            eyebrow="Contact"
-            title="Let's build something meaningful."
-            lead="Open to AI and software development opportunities, collaboration and continued learning."
-          />
-
-          <Reveal delay={100}>
-            <ul className="grid gap-4">
-              <li className="glass rounded-2xl p-5">
-                <div className="flex items-center gap-4">
-                  <span className="glass flex size-10 items-center justify-center rounded-xl">
-                    <Github className="size-4 text-cyan" aria-hidden="true" />
-                  </span>
-                  <div className="min-w-0">
-                    <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
-                      GitHub
-                    </p>
-                    <a
-                      href={GITHUB_URL}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="mt-1 block truncate text-sm font-medium hover:text-cyan"
-                    >
-                      github.com/222750014
-                    </a>
+        <div className="mt-16 grid gap-10 lg:grid-cols-[0.9fr_1fr] lg:items-start">
+          <div>
+            <SectionHeading
+              eyebrow="Hire Me"
+              title="Let's work together."
+              lead="Looking for a motivated graduate with an ICT foundation and growing expertise in data analytics and AI? Let's discuss how I could contribute to your team."
+            />
+            <ul className="mt-8 grid gap-3">
+              {[
+                { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
+                { icon: Phone, label: "Phone", value: PHONE_DISPLAY, href: `tel:${PHONE_TEL}` },
+                { icon: MapPin, label: "Location", value: "Cape Town, South Africa" },
+              ].map((c) => (
+                <li key={c.label} className="glass rounded-2xl p-4">
+                  <div className="flex items-center gap-4">
+                    <span className="glass flex size-10 shrink-0 items-center justify-center rounded-xl">
+                      <c.icon className="size-4 text-cyan" aria-hidden="true" />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
+                        {c.label}
+                      </p>
+                      {c.href ? (
+                        <a href={c.href} className="mt-1 block truncate text-sm font-medium hover:text-cyan">
+                          {c.value}
+                        </a>
+                      ) : (
+                        <p className="mt-1 text-sm font-medium">{c.value}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li className="glass rounded-2xl p-5">
-                <div className="flex items-center gap-4">
-                  <span className="glass flex size-10 items-center justify-center rounded-xl">
-                    <MapPin className="size-4 text-violet" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
-                      Location
-                    </p>
-                    <p className="mt-1 text-sm font-medium">
-                      Cape Town, South Africa
-                    </p>
-                  </div>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
+          </div>
+          <Reveal delay={100}>
+            <ContactForm />
           </Reveal>
         </div>
       </div>
