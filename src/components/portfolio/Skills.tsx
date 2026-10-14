@@ -1,39 +1,31 @@
-import { Brain, MessageSquareCode, Code2, BarChart3, Boxes } from "lucide-react";
+import { Brain, Code2, BarChart3, Database, Users } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const groups = [
   {
-    icon: Brain,
-    title: "AI & Machine Learning",
-    items: [
-      "Artificial Intelligence",
-      "Generative AI",
-      "Machine Learning",
-      "Large Language Models",
-      "Conversational AI",
-    ],
-  },
-  {
-    icon: MessageSquareCode,
-    title: "Prompt Engineering",
-    items: [
-      "Prompt Design",
-      "Role / Context / Constraints / Output",
-      "Few-shot prompting",
-      "Prompt optimisation",
-      "Prompt testing",
-    ],
-  },
-  { icon: Code2, title: "Programming", items: ["Python", "JavaScript", "HTML", "CSS"] },
-  {
     icon: BarChart3,
-    title: "Data",
-    items: ["Data Analysis", "Pandas", "NumPy", "Data Visualisation"],
+    title: "Data Analytics",
+    items: ["Data analysis & interpretation", "Data cleaning & preparation", "Reporting", "Data visualisation", "Excel", "SQL"],
   },
   {
-    icon: Boxes,
+    icon: Brain,
+    title: "AI & Prompt Engineering",
+    items: ["Prompt engineering", "Generative AI tools", "AI-assisted development", "AI for productivity"],
+  },
+  {
+    icon: Code2,
     title: "Software Development",
-    items: ["Application Development", "Web Development", "Problem Solving", "Software Engineering"],
+    items: ["Java", "Python", "JavaScript", "React", "HTML", "CSS", "SQL", "Testing & debugging"],
+  },
+  {
+    icon: Database,
+    title: "Databases & Systems",
+    items: ["MySQL", "MongoDB", "Data management", "Documentation", "System analysis"],
+  },
+  {
+    icon: Users,
+    title: "Professional Skills",
+    items: ["Analytical thinking", "Problem-solving", "Teamwork", "Communication", "Time management", "Stakeholder communication"],
   },
 ];
 

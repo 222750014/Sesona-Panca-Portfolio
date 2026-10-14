@@ -15,24 +15,28 @@ export type AssistantMessage = {
 };
 
 export const GITHUB_URL = "https://github.com/222750014";
+export const EMAIL = "pancasesona222@gmail.com";
+export const PHONE_DISPLAY = "068 420 8883";
+export const PHONE_TEL = "+27684208883";
+export const CV_URL = "/Sesona_Panca_CV.pdf";
 
 /** Structured facts the assistant is allowed to state. Nothing invented. */
 export const knowledgeBase = {
   identity:
-    "Sesona Panca is an ICT Applications Development graduate based in Cape Town, South Africa, born in June 2004. He builds practical skills in artificial intelligence, prompt engineering, conversational systems, Python and software development.",
+    "Sesona Panca is an ICT graduate based in Cape Town, South Africa, with a Diploma in ICT: Application Development. He is on a graduate programme in Data Analytics and combines a software development foundation with growing skills in data analysis and AI prompt engineering. He is open to graduate and entry-level roles.",
   study:
-    "Sesona completed a Diploma in ICT: Application Development at Cape Peninsula University of Technology. He also earned his National Senior Certificate at Cowan High School from 2017 to 2021.",
+    "Sesona completed a Diploma in ICT: Application Development at Cape Peninsula University of Technology (CPUT). He also earned his National Senior Certificate at Cowan High School (2017–2021).",
   bootcamp:
-    "He is completing a September 2026 Artificial Intelligence Bootcamp covering AI Foundations, Prompt Engineering, Applied AI Projects and Portfolio Development — across four weeks: AI foundations and chatbot development, content generation, sentiment analysis, and an end-to-end industry AI solution.",
+    "Since September 2026 he has been on a graduate programme in Data Analytics, focused on data analytics, professional development and applied AI, building practical projects such as AI-assisted web applications.",
   skills:
-    "His skills span AI & Machine Learning (Generative AI, LLMs, Conversational AI), Prompt Engineering (role/context/constraints/output design, few-shot prompting, optimisation and testing), Programming (Python, JavaScript, HTML, CSS), Data (analysis, Pandas, NumPy, visualisation) and Software Development.",
+    "His skills cover Data Analytics (analysis, cleaning, reporting, visualisation, Excel, SQL), AI & Prompt Engineering, Software Development (Java, Python, JavaScript, React, HTML, CSS, SQL, testing), Databases & Systems (MySQL, MongoDB, system analysis) and professional skills like problem-solving, teamwork and communication.",
   projects:
-    "His portfolio includes the AI Chatbot (Week 1, built), plus the AI Content Generator, Sentiment Analysis Tool and Industry AI Solution — those three are coming soon.",
+    "His projects include Creative Asset Orchestrator, an AI-assisted web app built with Lovable, and Sentiment Lab, a sentiment analysis and data insights project. More programme projects are on the way.",
   certificates:
-    "Sesona has verified Coursera credentials from Google, Google Cloud, IBM and DeepLearning.AI. They include the five-course Google AI Essentials Specialization, Introduction to AI, Maximize Productivity With AI Tools, Discover the Art of Prompting, Use AI Responsibly, Stay Ahead of the AI Curve, Introduction to Generative AI, AI For Everyone, and Generative AI: Prompt Engineering Basics.",
-  github: `You can explore his code and learning journey on GitHub: ${GITHUB_URL}`,
+    "Sesona has verified Coursera credentials from Google, Google Cloud, IBM and DeepLearning.AI, including the five-course Google AI Essentials Specialization, Introduction to Generative AI, AI For Everyone, and Generative AI: Prompt Engineering Basics.",
+  github: `You can explore his code on GitHub: ${GITHUB_URL}`,
   location: "Sesona is based in Cape Town, South Africa.",
-  contact: `The best way to reach his work is through GitHub: ${GITHUB_URL}. No email or phone number is listed here.`,
+  contact: `You can email Sesona at ${EMAIL} or call ${PHONE_DISPLAY}. The contact form at the bottom of the page works too.`,
 } as const;
 
 type Rule = { keywords: string[]; answer: string };

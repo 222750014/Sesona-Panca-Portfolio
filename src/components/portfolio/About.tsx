@@ -2,19 +2,13 @@ import { Cpu, MapPin, GraduationCap, CalendarDays } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const facts = [
-  { icon: GraduationCap, label: "Qualification", value: "Diploma in ICT: Application Development" },
+  { icon: GraduationCap, label: "Qualification", value: "Diploma in ICT: Application Development, CPUT" },
+  { icon: CalendarDays, label: "Currently", value: "Graduate Programme: Data Analytics (Sept 2026 – present)" },
   { icon: MapPin, label: "Location", value: "Cape Town, South Africa" },
-  { icon: CalendarDays, label: "Born", value: "June 2004" },
-  { icon: Cpu, label: "Current focus", value: "AI, Generative AI & Machine Learning" },
+  { icon: Cpu, label: "Interests", value: "Data, AI prompt engineering & practical AI" },
 ];
 
-const foundation = [
-  "Application development",
-  "Programming",
-  "Software engineering",
-  "Problem solving",
-  "Technology",
-];
+const foundation = ["Java", "Python", "SQL", "JavaScript", "React", "HTML", "CSS"];
 
 export function About() {
   return (
@@ -22,9 +16,9 @@ export function About() {
       <div className="section-shell grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:items-start">
         <div>
           <SectionHeading
-            eyebrow="About"
-            title="Turning a foundation in software development into practical AI solutions."
-            lead="My ICT Applications Development diploma gave me the engineering fundamentals. I'm now extending that foundation into artificial intelligence, generative AI and machine learning."
+            eyebrow="About Me"
+            title="An ICT graduate turning data and technology into practical solutions."
+            lead="I completed my Diploma in ICT: Application Development at Cape Peninsula University of Technology (CPUT) and I'm now on a graduate programme focused on Data Analytics, professional development and applied AI."
           />
 
           <Reveal delay={120} className="mt-8">
@@ -40,9 +34,9 @@ export function About() {
 
           <Reveal delay={200} className="mt-8">
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
-              That grounding in building real applications is what shapes how I approach AI: not as
-              a novelty, but as a set of tools for designing systems, structuring prompts and
-              solving practical problems with code.
+              I'm especially interested in AI prompt engineering and using data to improve business
+              processes. I'm committed to learning, solving problems, working well in teams and
+              growing into a trusted data and IT professional.
             </p>
           </Reveal>
         </div>

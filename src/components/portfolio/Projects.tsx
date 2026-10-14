@@ -1,53 +1,39 @@
 import { Github, ArrowUpRight } from "lucide-react";
-import { GITHUB_URL } from "@/lib/portfolio-assistant";
 import { Reveal, SectionHeading } from "./Reveal";
 
-const projects = [
+type Project = {
+  title: string;
+  tag: string;
+  problem: string;
+  role: string;
+  tech: string[];
+  features: string[];
+  url: string;
+  /** Only set when a real repository exists. */
+  github?: string;
+};
+
+/** Add new programme/bootcamp projects here — the cards render automatically. */
+const projects: Project[] = [
   {
-    n: "01",
-    week: "Week 1",
-    title: "AI Chatbot",
-    description:
-      "An AI chatbot prototype designed to demonstrate conversational AI, structured prompting and chatbot interaction.",
+    title: "Creative Asset Orchestrator",
+    tag: "AI-assisted web app",
     problem:
-      "Visitors and recruiters need quick, reliable answers about my background without reading a full portfolio.",
-    solution:
-      "A conversational assistant with structured prompt design and a controlled knowledge base, embedded directly in this site.",
-    tech: ["Python", "JavaScript", "Prompt Engineering", "Conversational AI"],
-    features: [
-      "Structured prompt design",
-      "Quick question shortcuts",
-      "Typing and message animation",
-      "Extensible response layer",
-    ],
-    status: "built" as const,
+      "A web application built to explore how AI-assisted development can turn an idea into a working product quickly.",
+    role: "Designed and built the application using AI-assisted development and prompt engineering.",
+    tech: ["Lovable", "AI-assisted development", "Prompt engineering"],
+    features: ["Live, working web application", "Built through structured prompting"],
+    url: "https://preview--creative-asset-orchestrator.lovable.app/",
   },
   {
-    n: "02",
-    week: "Week 2",
-    title: "AI Content Generator",
-    description:
-      "An AI-powered content generation project using structured prompts and prompt optimisation.",
-    tech: ["Generative AI", "Prompt Libraries", "Prompt Optimisation"],
-    status: "soon" as const,
-  },
-  {
-    n: "03",
-    week: "Week 3",
-    title: "Sentiment Analysis Tool",
-    description:
-      "A Python-based AI project designed to analyse sentiment and generate meaningful insights from text data.",
-    tech: ["Python", "Data Analysis", "Sentiment Analysis"],
-    status: "soon" as const,
-  },
-  {
-    n: "04",
-    week: "Week 4",
-    title: "Industry AI Solution",
-    description:
-      "An end-to-end AI solution demonstrating how AI can be applied to a real-world industry problem.",
-    tech: ["AI Architecture", "End-to-end Development", "Industry Application"],
-    status: "soon" as const,
+    title: "Sentiment Lab",
+    tag: "Sentiment analysis & data insights",
+    problem:
+      "Turning written text into clear sentiment insights, so opinions and feedback are easier to understand at a glance.",
+    role: "Built the project as practical work in sentiment analysis and data insights.",
+    tech: ["Sentiment analysis", "Data insights"],
+    features: ["Analyse text for sentiment", "Presents results as insights"],
+    url: "https://celadon-sopapillas-f45568.netlify.app/analyze",
   },
 ];
 
@@ -62,8 +48,8 @@ export function Projects() {
       <div className="section-shell relative">
         <SectionHeading
           eyebrow="Projects"
-          title="Work from the AI Bootcamp"
-          lead="One project per bootcamp week. Completed work is documented in full; upcoming work is marked clearly."
+          title="Selected work"
+          lead="Practical projects from my graduate programme and AI learning. More are added as they are completed."
         />
 
         <ul className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -71,43 +57,26 @@ export function Projects() {
             <Reveal as="li" key={p.title} delay={i * 80}>
               <article className="glass glow-border flex h-full flex-col rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-7">
                 <div className="flex items-start justify-between gap-4">
-                  <span className="font-display text-3xl font-bold text-gradient">{p.n}</span>
-                  <span
-                    className={`rounded-full px-3 py-1 text-xs ${
-                      p.status === "built"
-                        ? "bg-secondary text-cyan"
-                        : "border text-muted-foreground"
-                    }`}
-                  >
-                    {p.status === "built" ? p.week : "Coming Soon"}
+                  <span className="font-display text-3xl font-bold text-gradient">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
+                  <span className="rounded-full bg-secondary px-3 py-1 text-xs text-cyan">{p.tag}</span>
                 </div>
 
                 <h3 className="mt-5 text-xl font-semibold">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
 
-                {p.problem ? (
-                  <dl className="mt-5 space-y-3 border-t pt-5 text-sm">
-                    <div>
-                      <dt className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-cyan">
-                        Problem
-                      </dt>
-                      <dd className="mt-1 text-muted-foreground">{p.problem}</dd>
+                <dl className="mt-5 space-y-3 border-t pt-5 text-sm">
+                  {[
+                    ["Problem", p.problem],
+                    ["My role", p.role],
+                    ["Key features", p.features.join(" · ")],
+                  ].map(([k, v]) => (
+                    <div key={k}>
+                      <dt className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-cyan">{k}</dt>
+                      <dd className="mt-1 text-muted-foreground">{v}</dd>
                     </div>
-                    <div>
-                      <dt className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-cyan">
-                        Solution
-                      </dt>
-                      <dd className="mt-1 text-muted-foreground">{p.solution}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-cyan">
-                        Key features
-                      </dt>
-                      <dd className="mt-1 text-muted-foreground">{p.features?.join(" · ")}</dd>
-                    </div>
-                  </dl>
-                ) : null}
+                  ))}
+                </dl>
 
                 <ul className="mt-6 flex flex-wrap gap-2">
                   {p.tech.map((t) => (
@@ -117,31 +86,27 @@ export function Projects() {
                   ))}
                 </ul>
 
-                <div className="mt-7 flex flex-wrap gap-3 pt-1">
-                  {p.status === "built" ? (
-                    <>
-                      <a
-                        href="#assistant"
-                        className="btn-glow inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm"
-                      >
-                        View Project
-                        <ArrowUpRight className="size-4" aria-hidden="true" />
-                      </a>
-                      <a
-                        href={GITHUB_URL}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="btn-ghost inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm"
-                      >
-                        <Github className="size-4" aria-hidden="true" />
-                        GitHub
-                      </a>
-                    </>
-                  ) : (
-                    <span className="rounded-full border px-5 py-2.5 text-sm text-muted-foreground">
-                      In development
-                    </span>
-                  )}
+                <div className="mt-auto flex flex-wrap gap-3 pt-7">
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="btn-glow inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm"
+                  >
+                    View Project
+                    <ArrowUpRight className="size-4" aria-hidden="true" />
+                  </a>
+                  {p.github ? (
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="btn-ghost inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm"
+                    >
+                      <Github className="size-4" aria-hidden="true" />
+                      GitHub
+                    </a>
+                  ) : null}
                 </div>
               </article>
             </Reveal>
