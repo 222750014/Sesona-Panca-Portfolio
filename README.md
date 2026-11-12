@@ -3,7 +3,7 @@
 Implement exactly the screenshot and nothing else
 
 This project was built with [Lovable](https://lovable.dev).
-Live app: https://celadon-sopapillas-f45568.netlify.app/
+**Live app:** https://celadon-sopapillas-f45568.netlify.app/
 
 ## Build with Lovable
 
