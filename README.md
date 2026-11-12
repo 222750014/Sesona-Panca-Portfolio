@@ -2,8 +2,7 @@
 
 Implement exactly the screenshot and nothing else
 
-This project was built with [Lovable](https://lovable.dev).
-**Live app:**https://sesona-panca-portfolio.lovable.app/
+**Live app:** https://sesona-panca-portfolio.lovable.app/
 ## Build with Lovable
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9f942440-0b0a-4bb7-9167-309186a0bf18).
