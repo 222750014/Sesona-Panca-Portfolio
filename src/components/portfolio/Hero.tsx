@@ -4,15 +4,15 @@ import { CV_URL } from "@/lib/portfolio-assistant";
 import { Reveal } from "./Reveal";
 
 const codeLines = [
-  { text: "class Graduate:", tone: "key" },
+  { text: "class ICTDeveloper:", tone: "key" },
   { text: "    name = \"Sesona Panca\"", tone: "str" },
   { text: "    diploma = \"ICT: Application Development\"", tone: "str" },
-  { text: "    focus = [\"Data Analytics\", \"Prompt Engineering\"]", tone: "str" },
+  { text: "    foundation = [\"Java\", \"Python\", \"Web\", \"Databases\"]", tone: "str" },
   { text: "    def solve(self, problem):", tone: "key" },
-  { text: "        return insights(problem, with_=self.focus)", tone: "plain" },
+  { text: "        return practical_solution(problem)", tone: "plain" },
 ];
 
-const badges = ["Data Analytics", "SQL", "Python", "Prompt Engineering", "React"];
+const badges = ["Software Development", "Java", "Python", "Web Applications", "Databases"];
 
 export function Hero() {
   const [typed, setTyped] = useState(0);
@@ -57,20 +57,20 @@ export function Hero() {
               Hi, I&apos;m <span className="text-gradient">Sesona Panca.</span>
             </h1>
             <p className="mt-4 font-mono text-xs uppercase tracking-[0.25em] text-cyan sm:text-sm">
-              Data Analytics | AI Prompt Engineering | ICT
+              Software Developer | ICT Professional | Application Development
             </p>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              I build technology-driven solutions, explore insights through data, and use
-              AI-assisted development to solve practical problems.
+              I develop practical technology solutions, with an ICT foundation across programming,
+              web technologies, databases and information systems.
             </p>
           </Reveal>
 
           <Reveal delay={240}>
             <div className="mt-9 flex flex-wrap gap-3">
-              <a href="#contact" className="btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm">
+              <a href={CV_URL} target="_blank" rel="noreferrer noopener" className="btn-glow inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm">
                 Hire Me
                 <ArrowRight className="size-4" aria-hidden="true" />
               </a>

@@ -23,7 +23,7 @@ const projects: Project[] = [
     role: "Designed and built the application using AI-assisted development and prompt engineering.",
     tech: ["Lovable", "AI-assisted development", "Prompt engineering"],
     features: ["Live, working web application", "Built through structured prompting"],
-    url: "https://preview--creative-asset-orchestrator.lovable.app/",
+    url: "https://content-generat0r.lovable.app",
   },
   {
     title: "Sentiment Lab",
@@ -33,7 +33,7 @@ const projects: Project[] = [
     role: "Built the project as practical work in sentiment analysis and data insights.",
     tech: ["Sentiment analysis", "Data insights"],
     features: ["Analyse text for sentiment", "Presents results as insights"],
-    url: "https://celadon-sopapillas-f45568.netlify.app/analyze",
+    url: "https://celadon-sopapillas-f45568.netlify.app",
   },
 ];
 
@@ -49,7 +49,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Projects"
           title="Selected work"
-          lead="Practical projects from my graduate programme and AI learning. More are added as they are completed."
+          lead="Selected work across practical web applications, software development, and data-focused projects. More are added as they are completed."
         />
 
         <ul className="mt-12 grid gap-6 lg:grid-cols-2">

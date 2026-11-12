@@ -5,7 +5,7 @@ const facts = [
   { icon: GraduationCap, label: "Qualification", value: "Diploma in ICT: Application Development, CPUT" },
   { icon: CalendarDays, label: "Currently", value: "Graduate Programme: Data Analytics (Sept 2026 – present)" },
   { icon: MapPin, label: "Location", value: "Cape Town, South Africa" },
-  { icon: Cpu, label: "Interests", value: "Data, AI prompt engineering & practical AI" },
+  { icon: Cpu, label: "Interests", value: "Software development & practical technology solutions" },
 ];
 
 const foundation = ["Java", "Python", "SQL", "JavaScript", "React", "HTML", "CSS"];
@@ -17,8 +17,8 @@ export function About() {
         <div>
           <SectionHeading
             eyebrow="About Me"
-            title="An ICT graduate turning data and technology into practical solutions."
-            lead="I completed my Diploma in ICT: Application Development at Cape Peninsula University of Technology (CPUT) and I'm now on a graduate programme focused on Data Analytics, professional development and applied AI."
+            title="Software Developer | ICT Professional | Application Development"
+            lead="I completed my Diploma in ICT: Application Development at Cape Peninsula University of Technology (CPUT). My background spans software development, programming, databases, web technologies and information systems."
           />
 
           <Reveal delay={120} className="mt-8">
@@ -34,9 +34,9 @@ export function About() {
 
           <Reveal delay={200} className="mt-8">
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
-              I'm especially interested in AI prompt engineering and using data to improve business
-              processes. I'm committed to learning, solving problems, working well in teams and
-              growing into a trusted data and IT professional.
+              I enjoy building practical applications, learning new technologies and using
+              problem-solving to address real-world needs. My projects also include work in data
+              analytics and AI as part of a broader ICT journey.
             </p>
           </Reveal>
         </div>
