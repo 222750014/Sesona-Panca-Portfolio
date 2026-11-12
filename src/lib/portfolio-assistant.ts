@@ -23,15 +23,15 @@ export const CV_URL = "/Sesona_Panca_CV.pdf";
 /** Structured facts the assistant is allowed to state. Nothing invented. */
 export const knowledgeBase = {
   identity:
-    "Sesona Panca is an ICT graduate based in Cape Town, South Africa, with a Diploma in ICT: Application Development. He is on a graduate programme in Data Analytics and combines a software development foundation with growing skills in data analysis and AI prompt engineering. He is open to graduate and entry-level roles.",
+    "Sesona Panca is a Software Developer and ICT professional based in Cape Town, South Africa. He completed a Diploma in ICT: Application Development at CPUT and has a broad foundation in programming, web technologies, databases, software testing and information systems. He is on a graduate programme in Data Analytics and is open to graduate and entry-level opportunities.",
   study:
     "Sesona completed a Diploma in ICT: Application Development at Cape Peninsula University of Technology (CPUT). He also earned his National Senior Certificate at Cowan High School (2017–2021).",
   bootcamp:
     "Since September 2026 he has been on a graduate programme in Data Analytics, focused on data analytics, professional development and applied AI, building practical projects such as AI-assisted web applications.",
   skills:
-    "His skills cover Data Analytics (analysis, cleaning, reporting, visualisation, Excel, SQL), AI & Prompt Engineering, Software Development (Java, Python, JavaScript, React, HTML, CSS, SQL, testing), Databases & Systems (MySQL, MongoDB, system analysis) and professional skills like problem-solving, teamwork and communication.",
+    "His verified technical skills include Java, Python, JavaScript, React, HTML, CSS, SQL, MySQL, MongoDB, software testing and debugging, data management, documentation, system analysis, business process improvement and information security awareness. His broader ICT capabilities include information systems, problem-solving, teamwork, communication and Microsoft Office. His projects also include data analytics and AI work.",
   projects:
-    "His projects include Creative Asset Orchestrator, an AI-assisted web app built with Lovable, and Sentiment Lab, a sentiment analysis and data insights project. More programme projects are on the way.",
+    "His projects include Creative Asset Orchestrator, an AI-assisted web application built with Lovable, and Sentiment Lab, a sentiment analysis and data insights project. Together they show practical web application development and his additional work in data and AI. More programme projects are on the way.",
   certificates:
     "Sesona has verified Coursera credentials from Google, Google Cloud, IBM and DeepLearning.AI, including the five-course Google AI Essentials Specialization, Introduction to Generative AI, AI For Everyone, and Generative AI: Prompt Engineering Basics.",
   github: `You can explore his code on GitHub: ${GITHUB_URL}`,
@@ -54,7 +54,7 @@ const rules: Rule[] = [
 ];
 
 const fallback =
-  "I can answer questions about Sesona's background, his ICT Application Development diploma, certificates, September 2026 AI Bootcamp, skills, projects and GitHub. Try one of the quick questions below.";
+  "I can answer questions about Sesona's ICT background, Application Development diploma, software development skills, certificates, projects and GitHub. Try one of the quick questions below.";
 
 export const quickQuestions = [
   "Who is Sesona?",

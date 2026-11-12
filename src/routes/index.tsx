@@ -10,9 +10,9 @@ import { CaseStudy } from "@/components/portfolio/CaseStudy";
 import { Experience } from "@/components/portfolio/Experience";
 import { Contact, Footer } from "@/components/portfolio/Contact";
 
-const title = "Sesona Panca | Data Analytics, AI Prompt Engineering & ICT";
+const title = "Sesona Panca | Software Developer & ICT Professional";
 const description =
-  "Portfolio of Sesona Panca, a Cape Town ICT graduate on a Data Analytics graduate programme, with skills in SQL, Python, React and AI prompt engineering.";
+  "Portfolio of Sesona Panca, a Cape Town Software Developer and ICT professional with a foundation in application development, programming, web technologies, databases and information systems.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

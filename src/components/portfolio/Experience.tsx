@@ -83,7 +83,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Education & Learning"
           title="Learning & Development"
-          lead="A formal foundation in ICT, extended through focused, project-based AI learning."
+          lead="A formal foundation in ICT, complemented by verified credentials and focused project-based learning."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

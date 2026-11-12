@@ -1,31 +1,31 @@
-import { Brain, Code2, BarChart3, Database, Users } from "lucide-react";
+import { Code2, Globe, Database, Workflow, Users } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const groups = [
   {
-    icon: BarChart3,
-    title: "Data Analytics",
-    items: ["Data analysis & interpretation", "Data cleaning & preparation", "Reporting", "Data visualisation", "Excel", "SQL"],
-  },
-  {
-    icon: Brain,
-    title: "AI & Prompt Engineering",
-    items: ["Prompt engineering", "Generative AI tools", "AI-assisted development", "AI for productivity"],
-  },
-  {
     icon: Code2,
-    title: "Software Development",
-    items: ["Java", "Python", "JavaScript", "React", "HTML", "CSS", "SQL", "Testing & debugging"],
+    title: "Programming & Application Development",
+    items: ["Java", "Python", "JavaScript", "React"],
+  },
+  {
+    icon: Globe,
+    title: "Web Development",
+    items: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
     icon: Database,
-    title: "Databases & Systems",
-    items: ["MySQL", "MongoDB", "Data management", "Documentation", "System analysis"],
+    title: "Database Management",
+    items: ["SQL", "MySQL", "MongoDB", "Data management", "Documentation"],
+  },
+  {
+    icon: Workflow,
+    title: "Software Engineering & Systems",
+    items: ["Software testing & debugging", "System analysis", "Information systems", "Business process improvement"],
   },
   {
     icon: Users,
-    title: "Professional Skills",
-    items: ["Analytical thinking", "Problem-solving", "Teamwork", "Communication", "Time management", "Stakeholder communication"],
+    title: "Additional ICT Capabilities",
+    items: ["Information security awareness", "Technical problem-solving", "Analytical thinking", "Teamwork", "Communication", "Time management", "Stakeholder communication", "Microsoft Office"],
   },
 ];
 

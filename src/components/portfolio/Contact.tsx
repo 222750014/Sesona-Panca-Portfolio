@@ -38,7 +38,7 @@ export function Contact() {
             <SectionHeading
               eyebrow="Hire Me"
               title="Let's work together."
-              lead="Looking for a motivated graduate with an ICT foundation and growing expertise in data analytics and AI? Let's discuss how I could contribute to your team."
+              lead="Looking for a Software Developer with a broad ICT foundation? I’m interested in building practical solutions and contributing across software, web, database and information systems work."
             />
             <ul className="mt-8 grid gap-3">
               {[

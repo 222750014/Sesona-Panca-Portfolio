@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Github } from "lucide-react";
-import { GITHUB_URL } from "@/lib/portfolio-assistant";
+import { CV_URL, GITHUB_URL } from "@/lib/portfolio-assistant";
 
 const links = [
   { id: "home", label: "Home" },
@@ -83,7 +83,7 @@ export function Nav() {
           >
             <Github className="size-4" aria-hidden="true" />
           </a>
-          <a href="#contact" className="btn-glow inline-flex items-center rounded-full px-4 py-2 text-sm">
+          <a href={CV_URL} target="_blank" rel="noreferrer noopener" className="btn-glow inline-flex items-center rounded-full px-4 py-2 text-sm">
             Hire Me
           </a>
           <button
